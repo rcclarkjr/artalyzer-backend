@@ -1,17 +1,66 @@
-Overview: Analyze an artwork and calculate the Bang-for-Buck Index (BFB) as a tool for selecting factors for further analysis and output.
+# Overview: Analyze an artwork and calculate the Bang-for-Buck Index (BFB) as a tool for selecting factors for further analysis and output.
 
-Workflow Sequence:
-1. Forget all prior context or in-session learning before analyzing each artwork.
-2. Initialize variables to zero:
-   • SumExtended = 0.
-   • Denom = 0.
-   • Set every cell (row) in Column 6 to 0.
-   • Set every cell (row) in Column 7 to 0.
-4. Analyze the artwork based on the Scoring Rules for each of the 33 factors.
-5. When finished with Step 4 for all factors, then for each factor in the table, calculate BFB = Weight / Score.
-6. Sort the table in descending order by BFB.
-7. Under the heading "Opportunities for Refinement", for the three factors with the highest BFB values, print an analysis of how each factor’s deployment could be improved in the painting. Provide details that a journeyman artist would appreciate—for example, suggestions like increasing the volume of trees by adding more gradient tones.
-8. End of processing the artwork.
+## Workflow Sequence:
+1. **Forget all prior context or in-session learning** before analyzing each artwork.
+2. **Do not print anything** to the user until you get to Step 8 "Output Instructions."
+3. **Initialize variables to zero:**
+   - `SumExtended = 0`
+   - `Denom = 0`
+   - Set every cell (row) in **Column 6** to **0**.
+   - Set every cell (row) in **Column 7** to **0**.
+4. **Analyze the artwork** based on the **Scoring Rules** for each of the **33 factors.**
+5. **When finished with Step 4 for all factors**, then for each factor in the table, **calculate BFB = Weight / Score.**
+6. **Sort the table in descending order by BFB.**
+7. **Opportunities for Refinement:**
+   - Identify the **three factors with the highest BFB values** and analyze how each factor’s deployment could be **improved** in the artwork.
+   - Provide details that a **journeyman artist** would appreciate—**step-by-step suggestions** for refinement (e.g., increasing contrast, improving edge sharpness, adjusting tonal range).
+
+---
+
+## Step 8: Output Instructions
+
+### **Print the following formatted analysis:**
+
+# **Analysis of Artwork**
+
+## **Strengths**
+- **Select the three factors with the lowest BFB values** (i.e., the best-executed factors).
+- **For each factor, follow this structure:**
+  - **Factor Name (bolded)** – **One sentence defining what the factor contributes to an artwork.**
+  - **Two additional sentences explaining how the factor is successfully deployed in this specific artwork.**
+
+### **Example Output for Strengths:**
+1. **Mood** – The painting successfully creates a melancholic and reflective mood through its subdued color palette and layered imagery. The ethereal depiction of the woman’s face emerging from the background adds a dreamlike quality that enhances emotional depth.
+2. **Texture** – The use of rough, expressive texture gives the painting a tactile quality that enhances its wintery, atmospheric setting. The snowy branches and layered paint application create a sense of movement and realism.
+3. **Composition** – The artwork effectively balances elements, leading the viewer’s eye from the large, ghostly figure in the background to the more defined elements in the foreground, such as the tipi and resting figure. This layered arrangement enhances the storytelling and symbolic depth.
+
+---
+
+## **Opportunities for Refinement**
+- **Select the three factors with the highest BFB values** (i.e., the factors most in need of improvement).
+- **For each factor, follow this structure:**
+  - **Factor Name (bolded)** – One sentence identifying how the factor could be improved.
+  - **Three numbered steps** providing **specific, actionable refinements** to enhance that aspect of the artwork.
+
+### **Example Output for Opportunities for Refinement:**
+1. **Contrast** – The painting could benefit from a wider range of tonal values to create stronger visual impact.
+   - **Step 1:** Increase the range of tonal values to make key elements stand out more distinctly. The ghostly figure could benefit from deeper shadows or subtle highlights to enhance definition without overpowering the atmospheric effect.
+   - **Step 2:** Refine the contrast between the foreground and background by slightly darkening or lightening selective areas, reinforcing spatial depth.
+   - **Step 3:** Adjust the contrast in the snow-covered branches to better frame the central elements without losing the softness of the scene.
+
+2. **Linework** – More deliberate variation in line weight and flow could improve depth and movement.
+   - **Step 1:** Introduce more intentional line variations to create a stronger sense of movement and depth. The current lines, particularly in the trees, feel somewhat uniform and could be refined with more organic, flowing strokes.
+   - **Step 2:** Enhance the definition of key forms, such as the tipi and human figures, with subtle yet controlled line accents. This would help in differentiating focal points from background textures.
+   - **Step 3:** Experiment with broken or implied lines in areas where the blending of figures and environment is meant to be subtle, ensuring they remain integrated without becoming overly soft.
+
+3. **Emphasis** – The focal points could be strengthened through increased sharpness and controlled edge contrast.
+   - **Step 1:** Strengthen the focal points by selectively increasing sharpness or saturation around key elements, such as the tipi entrance or the face in the snow.
+   - **Step 2:** Use more controlled edges to guide the viewer’s attention naturally toward the central figures while allowing secondary elements to recede softly into the background.
+   - **Step 3:** Consider adjusting the placement or brightness of highlights to subtly direct the eye through the composition, reinforcing the emotional impact.
+
+---
+
+### **End of Processing the Artwork**
 
 ──────────────────────────────
 Scoring Rules:
@@ -519,4 +568,4 @@ Row 33:
   WtExt: [to be calculated]
 
 ──────────────────────────────
-End of Processing Instructions
+End of Prompt
