@@ -1,0 +1,113 @@
+Prompt to compute Skill Mastery Index (SMI):
+
+Variables:
+•	[Artist name]: Robert Bek
+•	[Title]: Cactus Flower
+•	[Dimensions]: 24 x 24 inches
+•	[Medium]: Acrylic on Canvas
+
+Instructions:
+Evaluate the attached artwork to determine its Skill Mastery Index (SMI). The SMI should reflect the degree of technical skill, artistic intention, and originality demonstrated by the artist. The final SMI should range from 1.0 to 5.0, expressed to one decimal place. The evaluation should be guided by the weighted factors table below, the definitions of mastery levels, and the structured analysis framework provided. The style of communication should remain polite, straightforward, and professional in the manner of a fine art appraiser. Avoid singular pronouns (e.g., "he/she"); use plural forms (e.g., "they/their") instead.
+________________________________________
+
+Evaluation Criteria:
+Weighted Factors for Skill Mastery:
+The SMI is calculated using the following 33 weighted factors across 5 categories:
+Category,Factor,Weight
+Core Elements,Line,3.7%
+Core Elements,Shape,3.1%
+Core Elements,Form,3.1%
+Core Elements,Space,3.7%
+Core Elements,Color/Hue,3.7%
+Core Elements,Texture	3.1%
+Core Elements,Tone/Value,3.7%
+Core Elements,Saturation,3.1%
+Core Elements,Composition,4.9%
+Core Elements,Volume,2.5%
+Design Principles,Balance,4.3%
+Design Principles,Contrast,3.7%
+Design Principles,Emphasis,3.7%
+Design Principles,Movement,3.1%
+Design Principles,Rhythm,3.1%
+Design Principles,Variety,2.5%
+Design Principles,Proportion,3.1%
+Design Principles,Harmony,3.7%
+Design Principles,Cohesiveness,3.1%
+Design Principles,Pattern,1.8%
+Techniques,Brushwork,3.7%
+Techniques,Chiaroscuro,3.1%
+Techniques,Impasto,2.5%
+Techniques,Sfumato,2.5%
+Techniques,Glazing,2.5%
+Techniques,Scumbling,1.8%
+Techniques,Pointillism,1.8%
+Techniques,Wet-on-Wet,1.8%
+Innovation,Uniqueness,4.3%
+Innovation,Creativity,4.9%
+Emotional Impact,Mood,4.3%
+Emotional Impact,Viewer Engagement,3.7%
+Emotional Impact,Emotional Resonance,4.3%
+
+________________________________________
+
+Definitions of Mastery Levels:
+1.	Novice (Score: 1.0–1.7):
+Basic understanding of tools and techniques; work is rudimentary and lacks polish.
+2.	Apprentice (Score: 1.8–2.7):
+Beginning to refine techniques; demonstrates some skill and intentionality, but consistency and execution are developing.
+3.	Journeyman (Score: 2.8–3.7):
+Proficient and consistent craftsmanship; work shows clear understanding and effective application of skills.
+4.	Artisan (Score: 3.8–4.7):
+Advanced craftsmanship with significant refinement, intentionality, and a recognizable personal style.
+5.	Master (Score: 4.8–5.0):
+Pinnacle of craftsmanship; exceptional execution, technical brilliance, and innovation that sets new standards.
+________________________________________
+
+Computation of Variables (SMI and BFB)
+1.	Scoring Each Factor:
+	a.	For each of the 33 factors estimate a score (“Score”) using one decimal place, ranging from 0.0 to 5.0, based on the following scale:
+		i.	0 = Not applicable or not evident (the factor was not undertaken).
+		ii.	1-5.0 = depending on the apparent Mastery Level for each factor
+2.	Conditionally Deleting Certain Rows:
+	a.	Before proceeding to the next step (calculations), remove all rows where Score = 0. These rows represent criteria not attempted by the artist and must be excluded from further analysis.
+3.	Calculations for each factor:
+	a.	Extended = Score × Weight (rounded to 3 decimals).
+	b.	BFB = (Weight × 100) / Score (rounded to the nearest whole number).
+4.	Sort:  Sort the factors’ table from high to low by the BFB column.
+5.	SMI: When all factors have been scored, SMI = the sum of all Extended.
+
+Output Report Formatting
+1.	For the basic text in the report, use the font Aptos (body) with a font size of 11 points and line spacing of 1.15.
+2.	For tables, ensure headings are bold, and data rows use a clean format with consistent column widths.
+o	Paragraph Structure:
+1.	Write in full, clear paragraphs.
+2.	Every time a factor is mentioned, its name should be in bold and it should be followed by a concise definition in italics.
+o	Tables
+1.	The Column headings from left to right should be:  Category, Factor, Score, Weight.   Do not show the Extended column even though you maintain it internally.  The percent sign for Weight should not appear in the heading but should be present at the end of number representing Weight (e.g. 3.7%).  Do not put any Subtotal lines in the printed table.
+o	Lists and Steps:
+1.	Use numbered lists for ordered points (e.g., steps for refinement).
+2.	Use bullet points for unordered lists (e.g., positive attributes or suggestions).
+o	Spacing and Breaks:
+1.	Leave one blank line between sections to visually separate them.
+2.	Avoid using any symbols, characters, or formatting that does not transfer cleanly to Word.
+o	No Decorative Symbols:
+1.	Avoid decorative symbols like asterisks, hashtags, or lines.
+3.	Content of the Output Report:
+o	Heading and Details:
+1.	Begin by printing the initial heading ‘Analysis of Artwork’ formatted as Heading 1 in Word, with a font size of 20 points. Ensure this heading is bold and uses a blue-green font color. The title ‘Analysis of Artwork’ must be styled as Heading 1 in Word, formatted with a 20-point font, bold, and in blue-green color. This style should make the title visually distinct as the primary heading of the document. Ensure Heading 1 (‘Analysis of Artwork’) follows Word’s standard formatting for Heading 1 styles but explicitly overrides the font size to 20 points.
+2.	Print the title, artist’s name, dimensions, and media.
+3.	Describe the painting with the straightforward tone of a fine art appraiser. Avoid analyzing the merits of the painting in this step but provide a description to help the reader visualize the important elements of the painting.
+o	Positive Attributes:
+1.	Provide an introductory paragraph (2 or 3 sentences) explaining that you will now describe the strongest attributes of the painting, based on your analysis of the 33 Essential Factors.
+2.	Discuss the 4 highest scoring criteria. Explain in detail why each criterion excelled and its impact on the overall artwork. Use bold font for the name of each criterion but do not include scores.
+o	Suggestions for Refinement:
+1.	Provide an introductory paragraph (2 or 3 sentences) describing that you have identified areas of potential refinement that offer the greatest opportunity for enhancing quality and value.
+2.	Focus only on criteria with Score > 0 and the highest BFB values. Exclude criteria with Score = 0, as these were not attempted. Provide constructive suggestions for refining 2 selected criteria based on the highest BFBs in this manner:
+1.	For each suggested refinement, first briefly describe the name of the factor (bold) and its definition (italics). Then, provide a step-by-step explanation on how the artist could implement the suggested refinement.  As you do this, make references to specific parts of the painting so it is clear to the reader how to accomplish the intended refinement. Avoid using vague terms like “adjust” and “enhance” and instead, use more direct language like “increase” and “decrease.” Present as many steps as are needed to be clear about the process, subject to a maximum of 3 steps for each refinement.  For example, if there are 5 steps in your step-by-step process, summarize the process down to 3 steps.
+o	Scoring of Skill Levels:
+1.	List the 5 Skill levels with a single-sentence definition of each.
+o	Skill Mastery Index:
+1.	Explain in one sentence what this step involves, then show a table of the individual scores for each of the 33 Essential Factors but do not show the Weight column.
+2.	Show the final SMI conclusion, rounded to two decimal places and somehow indicate that it is “out of 5.0”.
+3.	State that the score can be interpreted according to the Definitions of Mastery Levels (concisely stated at this point in the report).
+4.	Summarize in a paragraph of 2 to 4 sentences what the SMI score reflects, being sure to mention the artist by name.
