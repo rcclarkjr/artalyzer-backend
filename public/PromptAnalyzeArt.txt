@@ -58,11 +58,9 @@
    - **Step 2:** Use more controlled edges to guide the viewer’s attention naturally toward the central figures while allowing secondary elements to recede softly into the background.
    - **Step 3:** Consider adjusting the placement or brightness of highlights to subtly direct the eye through the composition, reinforcing the emotional impact.
 
+This is the end of the Example Output (i.e., There should be no text of closure statement after Step 3 of Refinement 3 above).
+
 ---
-
-### **End of Processing the Artwork**
-
-──────────────────────────────
 Scoring Rules:
 Scoring Rules are presented below.
 
