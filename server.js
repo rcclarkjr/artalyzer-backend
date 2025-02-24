@@ -10,6 +10,9 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors());
 
+// Serve static files from the "public" folder
+app.use(express.static("public"));
+
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // ✅ Load API key securely
 
 app.post("/analyze", async (req, res) => {
