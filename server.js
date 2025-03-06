@@ -10,12 +10,10 @@ app.use(cors());
 // Serve static files from the "public" folder
 app.use(express.static("public"));
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // ✅ Load API key securely
-
 // Endpoint to serve the prompt file
 app.get("/PromptAnalyzeArt.txt", (req, res) => {
   res.sendFile(__dirname + "/public/PromptAnalyzeArt.txt");
 });
-
 app.post("/analyze", async (req, res) => {
     try {
         const { prompt, image, artTitle, artistName } = req.body;
@@ -29,6 +27,9 @@ app.post("/analyze", async (req, res) => {
         if (artTitle && artistName) {
             enhancedPrompt = `Title: ${artTitle}\nArtist: ${artistName}\n\n${prompt}`;
         }
+        
+        // Modify the prompt to include instructions to report the SMI value
+        enhancedPrompt += "\n\nIMPORTANT: At the very end of your analysis, please include the calculated SMI value in the format 'SMI = X.XX' (where X.XX is the actual calculated value rounded to 2 decimal places).";
         
         const response = await axios.post(
             "https://api.openai.com/v1/chat/completions",
@@ -51,16 +52,25 @@ app.post("/analyze", async (req, res) => {
             }
         );
         
+        const analysisContent = response.data.choices[0].message.content;
+        
+        // Extract SMI value if present
+        let smiValue = null;
+        const smiMatch = analysisContent.match(/SMI\s*=\s*([\d.]+)/i);
+        if (smiMatch && smiMatch[1]) {
+            smiValue = smiMatch[1];
+        }
+        
         res.json({ 
-            analysis: response.data.choices[0].message.content,
+            analysis: analysisContent,
             artTitle: artTitle,
-            artistName: artistName
+            artistName: artistName,
+            smiValue: smiValue
         });
     } catch (error) {
         console.error("🔴 OpenAI API Error:", error.response?.data || error.message); // ✅ LOG ERROR DETAILS
         res.status(500).json({ error: error.response?.data?.error?.message || "OpenAI request failed" });
     }
 });
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
